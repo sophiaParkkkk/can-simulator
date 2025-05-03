@@ -20,3 +20,13 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+    if forged:
+        print(f"❌ Forged Message Detected! Reasons: {', '.join(reasons)}")
+    if detect_flooding():
+            print("⚠️ Flooding Attack Suspected!")
+    if detect_spoofing(msg["id"]):
+            print("⚠️ Spoofing Attack Detected!")
+
+    print()
+    time.sleep(0.2)  # Flooding 감지를 위해 메시지 속도 조절
